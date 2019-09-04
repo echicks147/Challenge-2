@@ -24,10 +24,14 @@ If the data loaded correctly, you should have a data frame with six columns.  Th
 | lifeExp   | num    |
 | gdpPercap | num    |
 In this chunk please confirm that the data was loaded as expected
+
 ```{r}
+gapminder
 ```
+
 Next check that all 1704 rows were loaded
 ```{r}
+nrow(gapminder)
 ```
 We would like to check the first *ten* lines of the data frame to be sure it looks as expected.  *Hint:* the function that you use to do this defaults to showing *six* lines, so you will need to check help to figure out how to show *ten* lines.  The first ten lines should look like this:
        country year      pop continent lifeExp gdpPercap
@@ -42,6 +46,7 @@ We would like to check the first *ten* lines of the data frame to be sure it loo
 9  Afghanistan 1992 16317921      Asia  41.674  649.3414
 10 Afghanistan 1997 22227415      Asia  41.763  635.3414
 ```{r}
+head(gapminder, n=10)
 ```
 ## Subsetting
 Subset the gapminder data to show only the rows from *Oceania*
