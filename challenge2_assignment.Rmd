@@ -51,9 +51,11 @@ head(gapminder, n=10)
 ## Subsetting
 Subset the gapminder data to show only the rows from *Oceania*
 ```{r}
+gapminder[gapminder$continent == "Oceania",]
 ```
 Now subset the gapminder data to show only the rows from *Oceania* and the columns: *country*, *year*, and *pop*
 ```{r}
+gapminder[gapminder$continent == "Oceania", c("country","year","pop")]
 ```
 Now extract the *Oceania* population values as a vector.
 ```{r}
