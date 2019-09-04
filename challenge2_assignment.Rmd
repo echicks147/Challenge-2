@@ -1,0 +1,64 @@
+---
+title: "Challenge 2"
+subtitle: "Working with Data"
+output: html_document
+---
+
+## Download Data
+
+Load the gapminder data into a dataframe directly from the Internet, without first downloading it to a file.  The URL for the gapminder data is <https://raw.githubusercontent.com/swcarpentry/r-novice-gapminder/gh-pages/_episodes_rmd/data/gapminder_data.csv>
+```{r}
+download.file("https://raw.githubusercontent.com/swcarpentry/r-novice-gapminder/gh-pages/_episodes_rmd/data/gapminder_data.csv", destfile = "githubstercontent.csv")
+
+gapminder <- read.csv("githubstercontent.csv")
+```
+> Hint: There are instructions for doing this in [Exploring Data Frames](http://swcarpentry.github.io/r-novice-gapminder/05-data-structures-part2/).  You can also figure this out by carefully reading the `read.csv` help
+## Quality Control
+If the data loaded correctly, you should have a data frame with six columns.  The columns should be named as follows, with the following data types for each column
+| Column    | Type   |
+|-----------+--------|
+| country   | Factor |
+| year      | int    |
+| pop       | num    |
+| continent | Factor |
+| lifeExp   | num    |
+| gdpPercap | num    |
+In this chunk please confirm that the data was loaded as expected
+```{r}
+```
+Next check that all 1704 rows were loaded
+```{r}
+```
+We would like to check the first *ten* lines of the data frame to be sure it looks as expected.  *Hint:* the function that you use to do this defaults to showing *six* lines, so you will need to check help to figure out how to show *ten* lines.  The first ten lines should look like this:
+       country year      pop continent lifeExp gdpPercap
+1  Afghanistan 1952  8425333      Asia  28.801  779.4453
+2  Afghanistan 1957  9240934      Asia  30.332  820.8530
+3  Afghanistan 1962 10267083      Asia  31.997  853.1007
+4  Afghanistan 1967 11537966      Asia  34.020  836.1971
+5  Afghanistan 1972 13079460      Asia  36.088  739.9811
+6  Afghanistan 1977 14880372      Asia  38.438  786.1134
+7  Afghanistan 1982 12881816      Asia  39.854  978.0114
+8  Afghanistan 1987 13867957      Asia  40.822  852.3959
+9  Afghanistan 1992 16317921      Asia  41.674  649.3414
+10 Afghanistan 1997 22227415      Asia  41.763  635.3414
+```{r}
+```
+## Subsetting
+Subset the gapminder data to show only the rows from *Oceania*
+```{r}
+```
+Now subset the gapminder data to show only the rows from *Oceania* and the columns: *country*, *year*, and *pop*
+```{r}
+```
+Now extract the *Oceania* population values as a vector.
+```{r}
+```
+Now extract the *Oceania* population values as a data frame. 
+Hint: you do not need to use `data.frame()` or `as.data.frame()` to do this.  You can find the answer in the [Subsetting Data](http://swcarpentry.github.io/r-novice-gapminder/06-data-subsetting/) lesson or by looking up help for `Extract`
+```{r}
+```
+# Session Info
+Always print `sessionInfo` for reproducibility!
+```{r}
+sessionInfo()
+```
