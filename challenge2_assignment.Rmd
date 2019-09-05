@@ -65,7 +65,8 @@ oceania_vector
 Now extract the *Oceania* population values as a data frame. 
 Hint: you do not need to use `data.frame()` or `as.data.frame()` to do this.  You can find the answer in the [Subsetting Data](http://swcarpentry.github.io/r-novice-gapminder/06-data-subsetting/) lesson or by looking up help for `Extract`
 ```{r}
-
+oceania_datframe = gapminder[3]
+oceania_datframe
 ```
 # Session Info
 Always print `sessionInfo` for reproducibility!
